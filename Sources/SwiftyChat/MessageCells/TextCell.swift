@@ -37,7 +37,7 @@ public struct TextCell: View {
             .lineLimit(nil)
             .foregroundColor(cellStyle.textStyle.textColor)
             .padding(.horizontal, cellStyle.textHorizontalPadding)
-            .padding([.top, .bottom], cellStyle.textVerticalPadding)
+            .padding(.vertical, cellStyle.textVerticalPadding)
             .background(cellStyle.cellBackgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: cellStyle.cellCornerRadius))
             .overlay(
