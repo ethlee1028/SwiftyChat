@@ -39,7 +39,7 @@ public struct TextCell: View {
             .padding(.horizontal, cellStyle.textHorizontalPadding)
             .padding(.vertical, cellStyle.textVerticalPadding)
             .background(cellStyle.cellBackgroundColor)
-            .clipShape(RoundedRectangle(cornerRadius: cellStyle.cellCornerRadius))
+            .clipShape(RoundedCornerShape(radius: cellStyle.cellCornerRadius, corners: self.message.isSender ? [.topLeft, .topRight, .bottomLeft] : [.allCorners]))
             .overlay(
                 RoundedRectangle(cornerRadius: cellStyle.cellCornerRadius)
                     .stroke(
@@ -79,7 +79,7 @@ public struct TextCell: View {
         .padding(.horizontal, cellStyle.textHorizontalPadding)
         .padding(.vertical, cellStyle.textVerticalPadding)
         .background(cellStyle.cellBackgroundColor)
-        .clipShape(RoundedRectangle(cornerRadius: cellStyle.cellCornerRadius))
+        .clipShape(RoundedCornerShape(radius: cellStyle.cellCornerRadius, corners: self.message.isSender ? [.topLeft, .topRight, .bottomLeft] : [.allCorners]))
         .overlay(
             RoundedRectangle(cornerRadius: cellStyle.cellCornerRadius)
                 .stroke(
