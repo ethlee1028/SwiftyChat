@@ -36,7 +36,7 @@ public struct TextCell: View {
             .modifier(EmojiModifier(text: text, defaultFont: cellStyle.textStyle.font))
             .lineLimit(nil)
             .foregroundColor(cellStyle.textStyle.textColor)
-            .padding([.leading, .trailing], cellStyle.textHorizontalPadding)
+            .padding(.horizontal, cellStyle.textHorizontalPadding)
             .padding([.top, .bottom], cellStyle.textVerticalPadding)
             .background(cellStyle.cellBackgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: cellStyle.cellCornerRadius))
@@ -76,8 +76,8 @@ public struct TextCell: View {
             ], detector: .url)
             $0.textAlignment = self.message.isSender ? .right : .left
         }
-        .padding([.leading, .trailing], cellStyle.textHorizontalPadding)
-        .padding([.top, .bottom], cellStyle.textVerticalPadding)
+        .padding(.horizontal, cellStyle.textHorizontalPadding)
+        .padding(.vertical, cellStyle.textVerticalPadding)
         .background(cellStyle.cellBackgroundColor)
         .clipShape(RoundedRectangle(cornerRadius: cellStyle.cellCornerRadius))
         .overlay(

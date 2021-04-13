@@ -24,8 +24,8 @@ struct TypingMessageView: View {
                 Spacer(minLength: 10)
             }
             TypingIndicatorView()
-                .padding([.top, .bottom], verticalPadding)
-                .padding([.leading, .trailing], horizontalPadding)
+                .padding(.vertical, verticalPadding)
+                .padding(.horizontal, horizontalPadding)
                 .background(backgroundColor)
                 .clipShape(RoundedRectangle(cornerRadius: verticalPadding))
                 .modifier(AvatarModifier(message: .init(user: user, messageKind: .text(""))))

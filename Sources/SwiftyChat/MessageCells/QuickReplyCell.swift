@@ -77,7 +77,7 @@ public struct QuickReplyCell: View {
     }
     
     public var body: some View {
-        conditionalStack(isVStack: totalOptionsLength > self.cellStyle.characterLimitToChangeStackOrientation) {
+        conditionalStack(isVStack: true) {
             return ForEach(0..<quickReplies.count) { idx -> AnyView in
 
                 let isSelected: Bool = idx == self.selectedIndex
