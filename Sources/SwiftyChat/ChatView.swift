@@ -173,7 +173,7 @@ public struct ChatView: View {
                 self.chatMessageCellContainer(in: geometry.size, with: message)
                 typingView(for: message)
             }
-            .padding(.horizontal, 40)
+            .padding(.horizontal, 30)
             .padding(.bottom, message.id == messages.last?.id ? 24 : 6)
             .padding(.top, message.id == messages.first?.id ? 24 : 6)
             .id(message.id)
