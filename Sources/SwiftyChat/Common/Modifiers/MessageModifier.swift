@@ -23,11 +23,11 @@ public struct MessageModifier: ViewModifier {
     public func body(content: Content) -> some View {
         HStack(spacing: 0) {
             if isSender {
-                Spacer(minLength: 0)
+                Spacer(minLength: 10)
             }
             content
             if !isSender && !isSpaceFreeMessageKind {
-                Spacer(minLength: 0)
+                Spacer(minLength: 10)
             }
         }.transition(isSender ? .move(edge: .leading) : .slide).embedInAnyView()
     }

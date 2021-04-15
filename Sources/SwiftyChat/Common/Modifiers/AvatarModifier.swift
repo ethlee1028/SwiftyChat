@@ -119,7 +119,6 @@ public struct AvatarModifier: ViewModifier {
                 content
                 positionedAvatar.zIndex(2).offset(x: offset.x, y: offset.y)
             }
-            .padding(10)
             .embedInAnyView()
         } else {
             return HStack(spacing: avatarSpacing.x) {
